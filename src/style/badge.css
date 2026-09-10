@@ -1,0 +1,14 @@
+@utility badge {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 0.25rem 0.725rem;
+    border-radius: 9999px;
+
+    background-color: var(--color-badge-bg);
+    color: var(--color-badge-text);
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.02em;
+}

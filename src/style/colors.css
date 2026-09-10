@@ -1,0 +1,81 @@
+@theme {
+    --font-family-sans:
+        "IBM Plex Sans", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+        Arial, sans-serif;
+    --font-family-mono:
+        "IBM Plex Mono", "JetBrains Mono", "Fira Code", "Cascadia Code", ui-monospace, "SF Mono",
+        "Consolas", monospace;
+
+    --color-base-100: oklch(0.975 0.012 85);
+    --color-base-200: oklch(0.945 0.018 85);
+    --color-base-300: oklch(0.88 0.025 80);
+    --color-base-content: oklch(0.22 0.035 55);
+    --color-base-content-soft: oklch(0.42 0.04 55);
+    --color-base-content-dim: oklch(0.6 0.035 55);
+    --color-primary: oklch(0.56 0.19 150);
+    --color-primary-content: oklch(0.98 0.01 90);
+    --color-secondary: oklch(0.72 0.17 60);
+    --color-secondary-content: oklch(0.26 0.05 55);
+    --color-accent: oklch(0.6 0.22 355);
+    --color-accent-content: oklch(0.98 0.01 90);
+    --color-neutral: oklch(0.25 0.04 300);
+    --color-neutral-content: oklch(0.96 0.01 85);
+    --color-info: oklch(0.65 0.16 235);
+    --color-success: oklch(0.6 0.18 155);
+    --color-warning: oklch(0.74 0.16 70);
+    --color-error: oklch(0.58 0.2 25);
+
+    --color-office-neutral: oklch(0.32 0.05 160);
+    --color-office-surface: oklch(0.94 0.04 150);
+    --color-office-primary: oklch(0.6 0.18 155);
+    --color-office-surface-content: oklch(0.2 0.05 160);
+
+    --color-menu-bg: oklch(0.855 0.015 85);
+
+    --color-menu-grid: rgb(0 0 0 / 0.08);
+
+    --color-sheen: rgb(255 255 255 / 0.35);
+
+    --color-badge-bg: oklch(0.62 0.24 355);
+    --color-badge-text: oklch(0.98 0.01 90);
+
+    --shadow-sticker: 0 4px 0 0 color-mix(in oklch, var(--color-base-content) 14%, transparent);
+    --shadow-sticker-strong: 0 4px 0 0
+        color-mix(in oklch, var(--color-base-content) 22%, transparent);
+    --shadow-sticker-sm: 0 3px 0 0 color-mix(in oklch, var(--color-base-content) 14%, transparent);
+
+    --radius-box: 0;
+    --radius-field: 0;
+}
+
+.dark {
+    --color-base-100: oklch(0.19 0.02 300);
+    --color-base-200: oklch(0.235 0.023 300);
+    --color-base-300: oklch(0.3 0.028 300);
+    --color-base-content: oklch(0.95 0.012 300);
+    --color-base-content-soft: oklch(0.78 0.02 300);
+    --color-base-content-dim: oklch(0.56 0.025 300);
+    --color-primary: oklch(0.68 0.18 150);
+    --color-primary-content: oklch(0.15 0.03 160);
+    --color-secondary: oklch(0.73 0.17 60);
+    --color-secondary-content: oklch(0.18 0.04 55);
+    --color-accent: oklch(0.68 0.21 355);
+    --color-accent-content: oklch(0.16 0.03 355);
+    --color-neutral: oklch(0.15 0.02 300);
+    --color-neutral-content: oklch(0.95 0.012 300);
+    --color-info: oklch(0.72 0.15 235);
+    --color-success: oklch(0.68 0.18 155);
+    --color-warning: oklch(0.8 0.16 70);
+    --color-error: oklch(0.66 0.2 25);
+
+    --color-office-neutral: oklch(0.27 0.045 150);
+    --color-office-surface: oklch(0.24 0.03 150);
+    --color-office-primary: oklch(0.68 0.18 155);
+    --color-office-surface-content: oklch(0.93 0.02 150);
+
+    --color-menu-bg: oklch(0.18 0.02 300);
+
+    --color-menu-grid: rgb(255 255 255 / 0.07);
+
+    --color-sheen: rgb(255 255 255 / 0.14);
+}

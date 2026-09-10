@@ -1,12 +1,12 @@
-import { PixiManager } from "./pixiManager"
+import { createContext } from "svelte"
+import { PixiManager } from "./pixiManager.svelte"
 
-export interface GameRoot {
-    pixiManager: PixiManager
-}
+export const [getGameRootContext, setGameRootContext] = createContext<GameRoot>()
 
-export async function createGameRoot(): Promise<GameRoot> {
+export type GameRoot = ReturnType<typeof createGameRoot>
+
+export function createGameRoot() {
     const pixiManager = new PixiManager()
-    await pixiManager.init()
 
     return { pixiManager }
 }

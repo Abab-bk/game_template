@@ -6,6 +6,8 @@ export class PixiManager {
     stage!: Container
     ticker!: Ticker
 
+    initialized = $state(false)
+
     constructor() {
         this.app = new Application()
     }
@@ -20,6 +22,8 @@ export class PixiManager {
         this.canvas = this.app.canvas as HTMLCanvasElement
         this.stage = this.app.stage
         this.ticker = this.app.ticker
+
+        this.initialized = true
     }
 
     destroy() {

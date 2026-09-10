@@ -1,15 +1,20 @@
 <script lang="ts">
-    import { onMount } from "svelte"
-    import type { GameRoot } from "./gameRoot"
+    import { setLinguiContext } from "lingui-for-svelte"
+    import { i18n } from "./i18n"
+    import { createGameRoot, setGameRootContext } from "./gameRoot"
+    import GameCanvas from "./GameCanvas.svelte"
+    import Hud from "./ui/Hud.svelte"
 
-    let { gameRoot }: { gameRoot: GameRoot } = $props()
+    const gameRoot = createGameRoot()
+    setGameRootContext(gameRoot)
 
-    onMount(() => {
-        const target = document.getElementById("app")!
-        target.appendChild(gameRoot.pixiManager.canvas)
-
-        return () => {
-            gameRoot.pixiManager.destroy()
-        }
-    })
+    setLinguiContext(i18n)
 </script>
+
+<div class="stack">
+    <GameCanvas></GameCanvas>
+
+    {#if gameRoot.pixiManager.initialized}
+        <Hud></Hud>
+    {/if}
+</div>
